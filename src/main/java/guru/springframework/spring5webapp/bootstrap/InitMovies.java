@@ -17,7 +17,7 @@ public class InitMovies implements CommandLineRunner {
 
         movieRepository.deleteAll()
                 .thenMany(
-                        Flux.just("Movie 1", "Movie 2")
+                        Flux.just("Movie 1", "Movie 2", "Movie 3", "Movie 4")
                                 .map(Movie::new)
                                 .flatMap(movieRepository::save)
 
